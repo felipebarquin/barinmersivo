@@ -44,6 +44,7 @@ const solutions = [
 ];
 
 import type { Metadata } from "next";
+import { Globe, Layers, Sparkles, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Solutions",
@@ -84,6 +85,72 @@ export default function SolutionsPage() {
           </div>
         ))}
       </section>
+
+      <section className="mt-16">
+  <h2 className="text-2xl font-semibold">Key Capabilities</h2>
+  <p className="mt-3 max-w-3xl text-sm text-white/70">
+    A scalable platform combining immersive technology, venue architecture,
+    and structured partnership models.
+  </p>
+
+  <div className="mt-8 grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div className="flex items-start gap-4">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <Globe className="h-5 w-5 text-white/70" />
+        </div>
+        <div>
+          <div className="text-base font-semibold">Global Rollout</div>
+          <div className="mt-2 text-sm text-white/70">
+            Designed for multi-city deployment and long-term international expansion.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div className="flex items-start gap-4">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <Layers className="h-5 w-5 text-white/70" />
+        </div>
+        <div>
+          <div className="text-base font-semibold">Modular StadiumXR</div>
+          <div className="mt-2 text-sm text-white/70">
+            Deployable immersive systems inside existing venues as low-CAPEX pilots.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div className="flex items-start gap-4">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <Sparkles className="h-5 w-5 text-white/70" />
+        </div>
+        <div>
+          <div className="text-base font-semibold">Premium Immersion</div>
+          <div className="mt-2 text-sm text-white/70">
+            Large-format immersive screens and spatial audio engineered for stadium energy.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div className="flex items-start gap-4">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <ShieldCheck className="h-5 w-5 text-white/70" />
+        </div>
+        <div>
+          <div className="text-base font-semibold">Partner-Safe Framework</div>
+          <div className="mt-2 text-sm text-white/70">
+            Structured sponsorship inventory and activation models built for scale.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* MVP vs Flagship */}
       <section className="mt-12 rounded-3xl border border-white/10 bg-white/4 p-10">
