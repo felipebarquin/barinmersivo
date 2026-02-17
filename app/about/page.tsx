@@ -52,6 +52,14 @@ const advisory = [
   },
 ];
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Partner with IMMERSIVE SPORTS SL to build Infinite Stadiums worldwide — premium sponsorship inventory designed for scale.",
+};
+
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">

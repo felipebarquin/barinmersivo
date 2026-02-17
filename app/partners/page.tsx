@@ -52,6 +52,14 @@ const roadmap = [
   { phase: "Phase 03", title: "International expansion", desc: "Franchise-ready playbook and multi-city rollout with partners." },
 ];
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Partners & Sponsors",
+  description:
+    "Partner with IMMERSIVE SPORTS SL to build Infinite Stadiums worldwide — premium sponsorship inventory designed for scale.",
+};
+
 export default function PartnersPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">

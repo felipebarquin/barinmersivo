@@ -2,6 +2,14 @@
 
 import { useState } from "react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Partner with IMMERSIVE SPORTS SL to build Infinite Stadiums worldwide — premium sponsorship inventory designed for scale.",
+};
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
