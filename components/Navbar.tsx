@@ -15,13 +15,22 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-baseline gap-2">
-          <span className="text-sm tracking-[0.2em] text-white/70">IMMERSIVE SPORTS</span>
-          <span className="text-xs text-white/40">SL</span>
+        {/* Brand */}
+        <Link href="/" className="group flex items-center gap-3">
+          <div className="flex flex-col leading-none">
+            <span className="text-xs tracking-[0.28em] text-white/60 group-hover:text-white/80 transition">
+              IMMERSIVE SPORTS
+            </span>
+            <span className="mt-1 text-sm font-semibold tracking-tight text-white">
+              SL
+              <span className="text-white/40 font-normal"> · Spain HQ</span>
+            </span>
+          </div>
         </Link>
 
+        {/* Nav */}
         <nav className="hidden items-center gap-6 md:flex">
           {nav.map((item) => {
             const active = pathname === item.href;
@@ -30,21 +39,40 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={`text-sm transition ${
-                  active ? "text-white" : "text-white/70 hover:text-white"
+                  active
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
                 }`}
               >
-                {item.label}
+                <span className="relative">
+                  {item.label}
+                  <span
+                    className={`absolute -bottom-2 left-0 h-[2px] w-full rounded-full transition ${
+                      active ? "bg-white/70" : "bg-transparent"
+                    }`}
+                  />
+                </span>
               </Link>
             );
           })}
         </nav>
 
-        <Link
-          href="/partners"
-          className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-white/90"
-        >
-          Become a Partner
-        </Link>
+        {/* CTA */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="/contact"
+            className="hidden rounded-xl border border-white/15 bg-white/0 px-4 py-2 text-sm text-white/80 hover:border-white/30 hover:text-white md:inline-flex transition"
+          >
+            Contact
+          </Link>
+
+          <Link
+            href="/partners"
+            className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-white/90 transition"
+          >
+            Become a Partner
+          </Link>
+        </div>
       </div>
     </header>
   );
